@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <CustomAction Description="Uruchamia proces wysyłki wiadomości oczekujących aktualnie w kolejce wiadomości. Proces ignoruje wiadomości z przyszłą planowaną datą nadania."
           Id="5D56CF72-A0B2-4FB9-9D49-BE46047C128A"

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="8c972065-38dd-46fc-bc1f-2a78bc0f3ac1" Scope="Web" Title="STAFix24_Ewajer Event Receivers">
+  <ElementManifests>
+    <ElementManifest Location="tabKlienci\Elements.xml" />
+    <ElementManifest Location="dicUrzedySkarbowe\Elements.xml" />
+    <ElementManifest Location="admProcesy\Elements.xml" />
+    <ElementManifest Location="tabSzablonyWiadomosci\Elements.xml" />
+    <ElementManifest Location="tabZadania\Elements.xml" />
+    <ElementManifest Location="dicRozliczenia\Elements.xml" />
+  </ElementManifests>
+</Feature>

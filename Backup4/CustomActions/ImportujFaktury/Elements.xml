@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+ <CustomAction Description="Uruchamia proces imortowania faktur za obsługę dodanych do rejestrów pośrednich tabFaktury i libFaktury"
+        Id="4c181357-aecc-49ea-aff0-0fedf68aeef9"
+        GroupId="SiteActions"
+        ImageUrl="/_layouts/images/Settings.gif"
+        Location="Microsoft.SharePoint.StandardMenu"
+        Sequence="510"
+        Title="Importuj faktury" >
+    <UrlAction Url="~site/Lists/admProcesy/NewForm.aspx?ContentTypeId=0x010012C56DEF8E3B1A45B66E8FB2ED3FFC130500D5850FB0F559E5439D97CF9611886F36"/>
+  </CustomAction>
+</Elements>

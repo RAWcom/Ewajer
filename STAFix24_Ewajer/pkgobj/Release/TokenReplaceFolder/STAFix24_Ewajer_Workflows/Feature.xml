@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="bb84bf32-6c7b-4f1e-a7d7-0da4019481ca" ReceiverAssembly="STAFix24.Ewajer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8ab5e47d51a735fd" ReceiverClass="Stafix.Features.Workflows.WorkflowsEventReceiver" Scope="Site" Title="STAFix24_Ewajer Workflows">
   <ElementManifests>
     <ElementManifest Location="admProcesyWF\Elements.xml" />

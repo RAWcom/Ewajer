@@ -18,7 +18,7 @@
     <JSLintSkip>
     </JSLintSkip>
     <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\Users\Administrator\Documents\GitHub\Ewajer\Backup\STAFix24_Ewajer\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Users\Administrator\Documents\GitHub\Ewajer\Backup8\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

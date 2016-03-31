@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="9b3f9159-af92-4df4-a465-f9a7bc8f5947" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="STAFix24.Ewajer.BLL.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="STAFix24.Ewajer.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="STAFix24.Ewajer.EventReceivers.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="STAFix24.Ewajer.Workflows.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Images\STAFix24_Ewajer\SETTINGS.GIF" />
+    <TemplateFile Location="Images\STAFix24_Ewajer\SETTINGS16.GIF" />
+    <TemplateFile Location="Images\STAFix24_Ewajer\SETTINGS32.GIF" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="STAFix24_Ewajer_EventReceivers\Feature.xml" />
+    <FeatureManifest Location="STAFix24_Ewajer_CustomActions\Feature.xml" />
+    <FeatureManifest Location="STAFix24_Ewajer_TimerJobs\Feature.xml" />
+    <FeatureManifest Location="STAFix24_Ewajer_Workflows\Feature.xml" />
+    <FeatureManifest Location="STAFix24_Ewajer_SiteWorkflows\Feature.xml" />
+  </FeatureManifests>
+</Solution>

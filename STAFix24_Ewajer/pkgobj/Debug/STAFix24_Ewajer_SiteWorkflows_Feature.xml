@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="e3fcc821-f6ab-4e2e-821c-f2177a50ebe0" ReceiverAssembly="STAFix24.Ewajer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8ab5e47d51a735fd" ReceiverClass="Stafix.Features.SiteWorkflows.SiteWorkflowsEventReceiver" Scope="Site" Title="STAFix24_Ewajer Site Workflows">
+  <ElementManifests>
+    <ElementManifest Location="swfObslugaKartKontrolnych\Elements.xml" />
+    <ElementManifest Location="swfObslugaWiadomosciOczekujacych\Elements.xml" />
+    <ElementManifest Location="swfStratyZLatUbieglych\Elements.xml" />
+  </ElementManifests>
+</Feature>

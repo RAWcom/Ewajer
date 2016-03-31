@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="4117044e-e411-44b6-86a2-a16892d482b1" solutionId="4117044e-e411-44b6-86a2-a16892d482b1" resetWebServer="false" name="STAFix24_Bcfuture" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="7cedfa8f-213d-4ebc-9dda-db5aabe56059" />
+  </features>
+</package>

@@ -18,3 +18,5 @@ C:\Users\Administrator\Documents\GitHub\Ewajer\EventReceivers\bin\Debug\STAFix24
 C:\Users\Administrator\Documents\GitHub\Ewajer\EventReceivers\obj\Debug\EventReceivers.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\Ewajer\EventReceivers\obj\Debug\STAFix24.Ewajer.EventReceivers.dll
 C:\Users\Administrator\Documents\GitHub\Ewajer\EventReceivers\obj\Debug\STAFix24.Ewajer.EventReceivers.pdb
+C:\Users\Administrator\Documents\GitHub\Ewajer\EventReceivers\bin\Debug\STAFix24.Ewajer.BLL.dll
+C:\Users\Administrator\Documents\GitHub\Ewajer\EventReceivers\bin\Debug\STAFix24.Ewajer.BLL.pdb

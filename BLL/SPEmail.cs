@@ -8,6 +8,7 @@ using System.Collections.Specialized;
 using Microsoft.SharePoint.Utilities;
 using System.Net;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace SPEmail
 {
@@ -67,7 +68,19 @@ namespace SPEmail
         /// </summary>
         public static bool SendMailWithAttachment(SPListItem item, MailMessage message)
         {
+            try
+            {
+                Debug.WriteLine("Proc: SendMailWithAttachment");
+                Debug.WriteLine("mail.From:" + message.From.ToString());
+                Debug.WriteLine("mail.ReplyTo:" + message.ReplyTo.ToString());
+            }
+            catch (Exception)
+            {}
+            
+
             bool result = false;
+
+            string emailDefaultSender = BLL.admSetup.GetValue(item.Web, "EMAIL_DEFAULT_SENDER");
 
             try
             {
@@ -77,26 +90,41 @@ namespace SPEmail
                 //nazwa witryny
                 if (string.IsNullOrEmpty(message.From.Address))
                 {
-                    message.From = new MailAddress(BLL.admSetup.GetValue(item.Web, "EMAIL_BIURA"),
+                    message.From = new MailAddress(
+                      emailDefaultSender,
                       item.Web.Title != null ? item.Web.Title : BLL.admSetup.GetValue(item.Web, "EMAIL_NAZWA_FIRMY"));
                 }
                 else
                 {
-                    message.From = new MailAddress(message.From.Address, Format_SenderDisplayName(item.Web, message.From.Address));
+                    message.From = new MailAddress(message.From.Address, Format_SenderDisplayName(item.Web, emailDefaultSender));
                 }
+
+                try
+                {
+                    Debug.WriteLine("message.From=" + message.From.ToString());
+                }
+                catch (Exception)
+                {}
 
                 //ustaw adres zwrotny 
 
                 message.ReplyTo = message.From;
 
-                if (message.From.Address.ToString().Equals("noreply@stafix24.pl"))
+                if (message.From.Address.ToString().Equals(emailDefaultSender))
                 {
                     string replyTo = BLL.admSetup.GetValue(item.Web, "EMAIL_BIURA");
                     if (!string.IsNullOrEmpty(replyTo))
                     {
-                        message.ReplyTo = new MailAddress(replyTo, Format_SenderDisplayName(item.Web, string.Empty));
+                        message.ReplyTo = new MailAddress(replyTo, Format_SenderDisplayName(item.Web, replyTo));
                     }
                 }
+
+                try
+                {
+                    Debug.WriteLine("message.ReplyTo=" + message.ReplyTo.ToString());
+                }
+                catch (Exception)
+                {}
 
                 for (int attachmentIndex = 0; attachmentIndex < item.Attachments.Count; attachmentIndex++)
                 {
@@ -110,10 +138,6 @@ namespace SPEmail
                 if (BLL.Tools.IsValidEmail(defaultSenderEmail))
                 {
                     message.From = new MailAddress(defaultSenderEmail, message.From.DisplayName);
-                }
-                else
-                {
-                    message.From = new MailAddress("noreply@stafix24.pl", message.From.DisplayName);
                 }
 
                 message.IsBodyHtml = true;
@@ -162,6 +186,12 @@ namespace SPEmail
         /// <param name="isTestMode"></param>
         public static bool SendMailFromMessageQueue(SPListItem item, MailMessage mail, bool isTestMode)
         {
+            Debug.WriteLine("Proc: SendMailFromMessageQueue");
+            if (mail.ReplyTo!=null)
+            {
+                Debug.WriteLine("mail.ReplyTo:" + mail.ReplyTo.ToString());
+            }
+            
             if (isTestMode)
             {
                 StringBuilder sb = new StringBuilder();

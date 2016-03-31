@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="9b3f9159-af92-4df4-a465-f9a7bc8f5947" SharePointProductVersion="14.0">
   <Assemblies>
     <Assembly Location="STAFix24.Ewajer.BLL.dll" DeploymentTarget="GlobalAssemblyCache" />
