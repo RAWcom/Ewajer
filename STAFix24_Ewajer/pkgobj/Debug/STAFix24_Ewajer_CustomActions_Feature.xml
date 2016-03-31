@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="c9466cbb-ad07-4f95-afaf-a5982fcb3170" ReceiverAssembly="STAFix24.Ewajer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8ab5e47d51a735fd" ReceiverClass="Stafix.Features.CustomActions.CustomActionsEventReceiver" Scope="Web" Title="STAFix24_Ewajer Custom Actions">
-  <ElementManifests>
-    <ElementManifest Location="PrzygotujWiadomosciZKartKontrolnych\Elements.xml" />
-    <ElementManifest Location="ObslugaKolejkiWiadomosci\Elements.xml" />
-  </ElementManifests>
-</Feature>

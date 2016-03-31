@@ -10,6 +10,6 @@ C:\_GitHub\Animus\Workflows\obj\Release\STAFix24.Animus.Workflows.dll
 C:\_GitHub\Animus\Workflows\obj\Release\STAFix24.Animus.Workflows.pdb
 C:\Users\Administrator\Documents\GitHub\Ewajer\Workflows\bin\Release\STAFix24.Ewajer.Workflows.dll
 C:\Users\Administrator\Documents\GitHub\Ewajer\Workflows\bin\Release\STAFix24.Ewajer.Workflows.pdb
+C:\Users\Administrator\Documents\GitHub\Ewajer\Workflows\obj\Release\Workflows.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\Ewajer\Workflows\obj\Release\STAFix24.Ewajer.Workflows.dll
 C:\Users\Administrator\Documents\GitHub\Ewajer\Workflows\obj\Release\STAFix24.Ewajer.Workflows.pdb
-C:\Users\Administrator\Documents\GitHub\Ewajer\Workflows\obj\Release\Workflows.csprojResolveAssemblyReference.cache

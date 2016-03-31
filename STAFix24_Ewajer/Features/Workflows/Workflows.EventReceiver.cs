@@ -43,8 +43,8 @@ namespace Stafix.Features.Workflows
                 }
                 else
                 {
-                    string subject = string.Format("Workflow Feature ({0}) activated", site.Url.ToString());
-                    ElasticEmail.EmailGenerator.SendMail(subject, string.Empty);
+                    //string subject = string.Format("Workflow Feature ({0}) activated", site.Url.ToString());
+                    //ElasticEmail.EmailGenerator.SendMail(subject, string.Empty);
                 }
             }
             catch (Exception ex)

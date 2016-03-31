@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="218440b1-5f64-4a94-a76f-9bac5c24a5cd" ReceiverAssembly="STAFix24.Ewajer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8ab5e47d51a735fd" ReceiverClass="Stafix.Features.TimerJobs.TimerJobsEventReceiver" Scope="Site" Title="STAFix24_Ewajer Timer Jobs"></Feature>

@@ -1,1 +1,0 @@
-bin\Debug\STAFix24_Ewajer.wsp
