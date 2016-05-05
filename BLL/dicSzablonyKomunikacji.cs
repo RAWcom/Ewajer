@@ -67,6 +67,7 @@ namespace BLL
                 footerTR = footerTR.Replace("[[ImieNazwisko]]", op.Name);
                 footerTR = footerTR.Replace("[[AdresEmail]]", op.Email);
                 footerTR = footerTR.Replace("[[Telefon]]", op.Telefon);
+                footerTR = footerTR.Replace("[[Stanowisko]]", op.Stanowisko);
 
             }
             else

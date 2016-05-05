@@ -129,12 +129,13 @@ namespace BLL
             else return string.Empty;
         }
 
-        public static void Get_OperatorDetailsById(SPWeb web, int operatorId, out string imieNazwisko, out string email, out string telefon)
+        public static void Get_OperatorDetailsById(SPWeb web, int operatorId, out string imieNazwisko, out string email, out string telefon, out string stanowisko)
         {
             SPListItem item = web.Lists.TryGetList(targetList).Items.GetItemById(operatorId);
             imieNazwisko = item.Title;
             email = BLL.Tools.Get_Text(item, "colEmail");
             telefon = BLL.Tools.Get_Text(item, "colTelefon");
+            stanowisko = BLL.Tools.Get_Text(item, "colStanowisko");
         }
     }
 }

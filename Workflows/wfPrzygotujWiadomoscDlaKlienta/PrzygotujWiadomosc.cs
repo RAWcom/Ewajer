@@ -599,20 +599,22 @@ namespace Workflows.PrzygotujWiadomosc
 
             if (operatorId > 0)
             {
-                string imieNazwisko, email, telefon;
+                string imieNazwisko, email, telefon, stanowisko;
 
-                BLL.dicOperatorzy.Get_OperatorDetailsById(item.Web, operatorId, out imieNazwisko, out email, out telefon);
+                BLL.dicOperatorzy.Get_OperatorDetailsById(item.Web, operatorId, out imieNazwisko, out email, out telefon, out stanowisko);
 
                 //z parametrów operatora
                 ReplaceString(sbFooter, "ImieNazwisko", imieNazwisko);
                 ReplaceString(sbFooter, "colEmail", email);
                 ReplaceString(sbFooter, "colTelefon", telefon);
+                ReplaceString(sbFooter, "colStanowisko", stanowisko);
             }
             else
             {
                 ReplaceString(sbFooter, "ImieNazwisko", BLL.admSetup.GetValue(item.Web, "NAZWA_OPERATORA"));
                 ReplaceString(sbFooter, "colEmail", BLL.admSetup.GetValue(item.Web, "EMAIL_BIURA"));
                 ReplaceString(sbFooter, "colTelefon", BLL.admSetup.GetValue(item.Web, "TELEFON_BIURA"));
+                ReplaceString(sbFooter, "colStanowisko", string.Empty);
             }
 
             selectedOperatorId = operatorId;

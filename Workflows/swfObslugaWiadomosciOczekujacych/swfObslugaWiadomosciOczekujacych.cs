@@ -53,7 +53,7 @@ namespace Workflows.swfObslugaWiadomosciOczekujacych
             item = myEnum.Current as SPListItem;
 
             SPWorkflow wf = BLL.Workflows.StartWorkflow(item, "Obsługa wiadomości");
-            Debug.WriteLine("StartWorkflow: Obsługa wiadomości " + wf.InternalState.ToString());
+            //Debug.WriteLine("StartWorkflow: Obsługa wiadomości " + wf.InternalState.ToString());
 
             logSelected_HistoryOutcome = item.ID.ToString();
 
