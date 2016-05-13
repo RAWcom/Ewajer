@@ -194,6 +194,8 @@ namespace Workflows.PrzygotujWiadomosc
 
         private void Manage_VAT_ExecuteCode(object sender, EventArgs e)
         {
+            Debug.WriteLine("Manage_VAT_ExecuteCode");
+
             if (HasStatus(item, "colVAT_StatusZadania", _ZADANIE_ZWOLNIONE))
             {
                 sbVAT = new StringBuilder(BLL.dicSzablonyKomunikacji.Ensure_HTMLByKod(item.Web, _VAT_HTML_TEMPLATE_NAME));
@@ -436,11 +438,11 @@ namespace Workflows.PrzygotujWiadomosc
                 //z karty kontrolnej
                 ReplaceCurrency(sbVAT, item, "colVAT_WartoscNadwyzkiZaPoprzedniMiesiac");
                 ReplaceCurrency(sbVAT, item, "colVAT_WartoscDoZaplaty");
-                ReplaceCurrency(sbVAT, item, "colVAT_WartoscDoPrzeniesienia");
-                ReplaceCurrency(sbVAT, item, "colVAT_WartoscDoZwrotu");
+                //ReplaceCurrency(sbVAT, item, "colVAT_WartoscDoPrzeniesienia");
+                //ReplaceCurrency(sbVAT, item, "colVAT_WartoscDoZwrotu");
                 ReplaceDate(sbVAT, item, "colVAT_TerminPlatnosciPodatku");
                 ReplaceString(sbVAT, item, "colFormaOpodatkowaniaVAT");
-                ReplaceString(sbVAT, item, "colVAT_TerminZwrotuPodatku");
+                //ReplaceString(sbVAT, item, "colVAT_TerminZwrotuPodatku");
                 ReplaceString(sbVAT, item, "colVAT_Decyzja");
 
                 //z parametrów klienta
@@ -473,8 +475,7 @@ namespace Workflows.PrzygotujWiadomosc
                     case "Do przeniesienia i do zwrotu":
                         sbVAT.Replace("[[Tytul]]", _VAT_TYTUL_PRZENIESIENIE_ZWROT);
 
-                        Append_VAT_DoPrzeniesienia();
-                        Append_VAT_DoZwrotu();
+                        Append_VAT_DoPrzeniesieniaDoZwrotu();
 
                         break;
                     default:
@@ -536,7 +537,7 @@ namespace Workflows.PrzygotujWiadomosc
             //do zwrotu
             szablon = BLL.dicSzablonyKomunikacji.Get_HTMLByKod(item.Web, "VAT.TR_TEMPLATE.Include");
             szablon = szablon.Replace("[[Opis]]", string.Format("Wartość do zwrtoru ({0})", BLL.Tools.Get_Text(item, "colVAT_TerminZwrotuPodatku")));
-            szablon = szablon.Replace("[[Wartosc]]", BLL.Tools.Format_Currency(BLL.Tools.Get_Value(item, "colVAT_WartoscDoPrzeniesienia")));
+            szablon = szablon.Replace("[[Wartosc]]", BLL.Tools.Format_Currency(BLL.Tools.Get_Value(item, "colVAT_WartoscDoZwrotu")));
 
             sbVAT.Replace("[[VAT.TR]]", szablon);
         }
@@ -550,6 +551,24 @@ namespace Workflows.PrzygotujWiadomosc
             szablon = szablon.Replace("[[Wartosc]]", BLL.Tools.Format_Currency(BLL.Tools.Get_Value(item, "colVAT_WartoscDoPrzeniesienia")));
 
             sbVAT.Replace("[[VAT.TR]]", szablon);
+        }
+
+        private void Append_VAT_DoPrzeniesieniaDoZwrotu()
+        {
+            string szablon;
+            szablon = BLL.dicSzablonyKomunikacji.Get_HTMLByKod(item.Web, "VAT.TR_TEMPLATE.Include");
+
+            //do przeniesienia
+            string tr1;
+            tr1 = szablon.Replace("[[Opis]]", "Wartość do przeniesienia");
+            tr1 = tr1.Replace("[[Wartosc]]", BLL.Tools.Format_Currency(BLL.Tools.Get_Value(item, "colVAT_WartoscDoPrzeniesienia")));
+
+            //do zwrotu
+            string tr2;
+            tr2 = szablon.Replace("[[Opis]]", string.Format("Wartość do zwrtoru ({0})", BLL.Tools.Get_Text(item, "colVAT_TerminZwrotuPodatku")));
+            tr2 = tr2.Replace("[[Wartosc]]", BLL.Tools.Format_Currency(BLL.Tools.Get_Value(item, "colVAT_WartoscDoZwrotu")));
+
+            sbVAT.Replace("[[VAT.TR]]", string.Concat(tr1,tr2));
         }
 
         private void Create_RBR_ExecuteCode(object sender, EventArgs e)
