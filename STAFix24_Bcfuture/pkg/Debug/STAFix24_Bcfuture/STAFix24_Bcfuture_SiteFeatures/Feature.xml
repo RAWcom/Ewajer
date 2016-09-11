@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="WF: Import faktur, Wysyłka monitów" Id="c89ce47a-c80a-4b17-b7d0-d0ec7fd628b4" ReceiverAssembly="STAFix24_Bcfuture, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58ba3419367d5390" ReceiverClass="STAFix24_Bcfuture.Features.SiteFeatures.SiteFeaturesEventReceiver" Scope="Site" Title="STAFix24_Bcfuture Site Features">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="WF: Import faktur, Wysyłka monitów&#xD;&#xA;CA: Importuj faktury" Id="c89ce47a-c80a-4b17-b7d0-d0ec7fd628b4" ReceiverAssembly="STAFix24_Bcfuture, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58ba3419367d5390" ReceiverClass="STAFix24_Bcfuture.Features.SiteFeatures.SiteFeaturesEventReceiver" Scope="Site" Title="STAFix24_Bcfuture Site Features">
   <ElementManifests>
     <ElementManifest Location="ImportFakturWF\Elements.xml" />
+    <ElementManifest Location="ImportujFaktury\Elements.xml" />
+    <ElementManifest Location="MonitPrzeterminowaneNaleznosci\Elements.xml" />
     <ElementManifest Location="WysylkaMonituWF\Elements.xml" />
   </ElementManifests>
 </Feature>

@@ -3,9 +3,3 @@ C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix2
 C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\obj\Debug\STAFix24_Ewajer.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\obj\Debug\STAFix24.Ewajer.dll
 C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\obj\Debug\STAFix24.Ewajer.pdb
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix24.Ewajer.BLL.dll
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix24.Ewajer.EventReceivers.dll
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix24.Ewajer.Workflows.dll
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix24.Ewajer.BLL.pdb
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix24.Ewajer.EventReceivers.pdb
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Ewajer\bin\Debug\STAFix24.Ewajer.Workflows.pdb

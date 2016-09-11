@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="4117044e-e411-44b6-86a2-a16892d482b1" SharePointProductVersion="14.0">
   <Assemblies>
     <Assembly Location="STAFix24_Bcfuture.dll" DeploymentTarget="GlobalAssemblyCache" />

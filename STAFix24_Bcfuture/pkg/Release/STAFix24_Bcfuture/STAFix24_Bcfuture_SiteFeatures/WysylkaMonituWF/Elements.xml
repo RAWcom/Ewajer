@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!-- Customize the text in square brackets. 
 Remove brackets when filling in, e.g.
@@ -7,7 +7,7 @@ Name="[NAME]" ==> Name="MyWorkflow" -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Workflow
      Name="Wysyłka monitu"
-     Description="My SharePoint Workflow"
+     Description=""
      Id="4b15ddb0-67ef-457d-89c4-e78a735423e7"
      CodeBesideClass="STAFix24_Bcfuture.WysylkaMonituWF.WysylkaMonituWF"
      CodeBesideAssembly="STAFix24_Bcfuture, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58ba3419367d5390">

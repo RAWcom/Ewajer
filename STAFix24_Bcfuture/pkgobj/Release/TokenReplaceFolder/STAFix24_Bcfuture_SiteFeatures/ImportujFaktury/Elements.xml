@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
  <CustomAction Description="Uruchamia proces imortowania faktur za obsługę dodanych do rejestrów pośrednich tabFaktury i libFaktury"
         Id="4c181357-aecc-49ea-aff0-0fedf68aeef9"

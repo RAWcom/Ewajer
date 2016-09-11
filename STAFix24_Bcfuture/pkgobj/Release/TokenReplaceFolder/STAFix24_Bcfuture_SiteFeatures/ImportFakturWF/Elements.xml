@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!-- Customize the text in square brackets. 
 Remove brackets when filling in, e.g.
@@ -7,7 +7,7 @@ Name="[NAME]" ==> Name="MyWorkflow" -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Workflow
      Name="Import faktur"
-     Description="My SharePoint Workflow"
+     Description=""
      Id="4e1beb90-bffe-49d1-a701-a9e241f838a1"
      CodeBesideClass="STAFix24_Bcfuture.ImportFakturWF.ImportFakturWF"
      CodeBesideAssembly="STAFix24_Bcfuture, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58ba3419367d5390">

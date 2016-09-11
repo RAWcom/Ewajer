@@ -3,5 +3,3 @@ C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Bcfuture\bin\Debug\STAFi
 C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Bcfuture\obj\Debug\STAFix24_Bcfuture.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Bcfuture\obj\Debug\STAFix24_Bcfuture.dll
 C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Bcfuture\obj\Debug\STAFix24_Bcfuture.pdb
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Bcfuture\bin\Debug\STAFix24.Ewajer.BLL.dll
-C:\Users\Administrator\Documents\GitHub\Ewajer\STAFix24_Bcfuture\bin\Debug\STAFix24.Ewajer.BLL.pdb
