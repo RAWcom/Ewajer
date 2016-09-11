@@ -6,11 +6,11 @@ using System.Security;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EventReceivers")]
+[assembly: AssemblyTitle("STAFix24_BR5")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EventReceivers")]
+[assembly: AssemblyProduct("STAFix24_BR5")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Security;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("55ba1847-ed27-481d-b213-c6a4c8bcc3ed")]
+[assembly: Guid("aa4c79fd-6b0c-4ab3-8ddb-c00c0aa8b74c")]
 
 // Version information for an assembly consists of the following four values:
 //

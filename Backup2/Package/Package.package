@@ -1,16 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="36471287-feb7-4959-b683-060793626282" solutionId="9b3f9159-af92-4df4-a465-f9a7bc8f5947" resetWebServer="false" name="STAFix24_Ewajer" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
-  <assemblies>
-    <projectOutputAssembly location="STAFix24.Ewajer.BLL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\BLL\BLL.csproj" />
-  </assemblies>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="4117044e-e411-44b6-86a2-a16892d482b1" solutionId="4117044e-e411-44b6-86a2-a16892d482b1" resetWebServer="false" name="STAFix24_Bcfuture" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <features>
-    <featureReference itemId="b05bf8c5-0365-4f4a-bdf1-04344e1144ca" />
-    <featureReference itemId="d40d4b38-13a3-45ed-bf6e-c86fbf5a9978" />
-    <featureReference itemId="6ff9fa36-0878-4a82-be9f-1d873aad25bb" />
-    <featureReference itemId="31fe062a-398b-482b-95af-49b6055abbd5" />
-    <featureReference itemId="0026f035-23d4-476a-860f-74450469f01d" />
+    <featureReference itemId="7cedfa8f-213d-4ebc-9dda-db5aabe56059" />
   </features>
-  <projectItems>
-    <projectItemReference itemId="348bef8e-f411-4079-adeb-8646bc1f082e" />
-  </projectItems>
 </package>

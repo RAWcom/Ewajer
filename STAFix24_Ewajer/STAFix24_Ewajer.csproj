@@ -17,8 +17,8 @@
     <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
     <JSLintSkip>
     </JSLintSkip>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\Users\Administrator\Documents\GitHub\Ewajer\Backup4\</UpgradeBackupLocation>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Administrator\Documents\GitHub\Ewajer\Backup1\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
