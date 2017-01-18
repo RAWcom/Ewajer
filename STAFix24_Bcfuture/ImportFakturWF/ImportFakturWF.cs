@@ -507,7 +507,7 @@ namespace STAFix24_Bcfuture.ImportFakturWF
 
             string odbiorca = BLL.tabKlienci.Get_EmailById(item.Web, currentKlientId);
             string kopiaDla = BLL.Tools.Append_EmailCC(item.Web, currentKlientId, string.Empty);
-            bool KopiaDoNadawcy = true;
+            bool KopiaDoNadawcy = false;
             bool KopiaDoBiura = false;
 
             DateTime planowanyTerminNadania = DateTime.Now.AddHours(1);
