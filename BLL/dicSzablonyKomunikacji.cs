@@ -17,39 +17,24 @@ namespace BLL
 
         public static void Get_TemplateByKod(SPListItem item, string kod, out string temat, out string trescHTML, string nadawcaEmail)
         {
-            switch (item.ParentList.Title)
+            string temp = string.Empty;
+            string footerTR = string.Empty;
+
+            Get_TemplateByKod(item, "EMAIL_FOOTER_TR", out temp, out footerTR, false);
+
+            if (string.IsNullOrEmpty(nadawcaEmail))
             {
-                case "Zadania":
-                    //zobacz czy operator jest przypisany do zadania
-
-                    string temp = string.Empty;
-                    string footerTR = string.Empty;
-                    //Get_TemplateByKod(item.Web, "EMAIL_FOOTER_TR", out temp, out footerTR, false);
-                    Get_TemplateByKod(item.Web, "EMAIL_FOOTER_TR", out temp, out footerTR, false);
-
-                    if (string.IsNullOrEmpty(nadawcaEmail))
-                    {
-                        int operatorId = Get_LookupId(item, "selOperator");
-                        footerTR = Format_FooterTR(item, footerTR, operatorId);
-                    }
-                    else
-                    {
-                        int operatorId = BLL.dicOperatorzy.Get_OperatorIdByEmail(item.Web, nadawcaEmail);
-                        footerTR = Format_FooterTR(item, footerTR, operatorId);
-                    }
-
-                    Get_TemplateByKod(item.Web, kod, out temat, out trescHTML, true);
-                    trescHTML = trescHTML.Replace("___FOOTER___", footerTR);
-
-
-                    break;
-
-                default:
-                    Get_TemplateByKod(item.Web, kod, out temat, out trescHTML, true);
-                    break;
+                int operatorId = Get_LookupId(item, "selOperator");
+                footerTR = Format_FooterTR(item, footerTR, operatorId);
+            }
+            else
+            {
+                int operatorId = BLL.dicOperatorzy.Get_OperatorIdByEmail(item.Web, nadawcaEmail);
+                footerTR = Format_FooterTR(item, footerTR, operatorId);
             }
 
-
+            Get_TemplateByKod(item, kod, out temat, out trescHTML, true);
+            trescHTML = trescHTML.Replace("___FOOTER___", footerTR);
 
         }
 
@@ -81,15 +66,17 @@ namespace BLL
         /// <summary>
         /// pobiera odpowiedni szablon wiadomości i ukrywa sekcję footer jeżeli flaga nie jest ustawiona
         /// </summary>
-        public static void Get_TemplateByKod(SPWeb web, string kod, out string temat, out string trescHTML, bool hasFooter)
+        public static void Get_TemplateByKod(SPListItem item, string kod, out string temat, out string trescHTML, bool hasFooter)
         {
+            SPWeb web = item.Web;
+
             SPList list = web.Lists.TryGetList(targetList);
-            SPListItem item = list.Items.Cast<SPListItem>()
+            SPListItem item2 = list.Items.Cast<SPListItem>()
                 .Where(i => i.Title == kod)
                 .FirstOrDefault();
 
-            temat = item["colTematWiadomosci"] != null ? item["colTematWiadomosci"].ToString() : string.Empty;
-            trescHTML = item["colHTML"] != null ? item["colHTML"].ToString() : string.Empty;
+            temat = item2["colTematWiadomosci"] != null ? item2["colTematWiadomosci"].ToString() : string.Empty;
+            trescHTML = item2["colHTML"] != null ? item2["colHTML"].ToString() : string.Empty;
 
             //zapakuj treść do szablonu
             if (kod.EndsWith(".Include"))

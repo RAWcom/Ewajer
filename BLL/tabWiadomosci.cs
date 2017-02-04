@@ -238,8 +238,10 @@ namespace BLL
                 string trescHTML = string.Empty;
 
                 //string nadawca = BLL.Tools.Get_CurrentUser(item); - wymusza przypisanie stopki operatora na podstawie aktualnego adresu nadawcy
-
                 string nadawca = string.Empty; //wymusza aby testo czy trzeba dodać stopkę został wykonany w procedurze Get_TemplateByKod
+                int operatorId = BLL.Tools.Get_LookupId(item, "selOperator");
+                if (operatorId > 0) nadawca = BLL.dicOperatorzy.Get_EmailById(item.Web,operatorId);
+
 
                 //sprawdz czy nie nadpisać szablonu
 

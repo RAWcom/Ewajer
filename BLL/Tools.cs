@@ -153,7 +153,11 @@ namespace BLL
 
         public static string Get_Text(SPListItem item, string col)
         {
-            return item[col] != null ? item[col].ToString() : string.Empty;
+            if (item.ParentList.Fields.ContainsField(col))
+            {
+                return item[col] != null ? item[col].ToString() : string.Empty;
+            }
+            else return string.Empty;
         }
 
         public static bool Get_Flag(SPListItem item, string col)
