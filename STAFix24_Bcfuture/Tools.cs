@@ -28,6 +28,26 @@ namespace STAFix24_Bcfuture
             return 0;
         }
 
+        internal static string GetUserEmail(SPListItem item, string col)
+        {
+            string result = item[col] != null ? new SPFieldUserValue(item.Web, item[col].ToString()).User.Email : string.Empty;
+            if (Is_ValidEmail(result)) return result;
+            else return string.Empty;
+        }
+
+        internal static bool Is_ValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         internal static int GetLookupId(SPListItem item, string col)
         {
             return item[col] != null ? new SPFieldLookupValue(item[col].ToString()).LookupId : 0;

@@ -465,14 +465,9 @@ namespace STAFix24_Bcfuture.ImportFakturWF
             string tresc = string.Empty;
             string trescHTML = string.Empty;
 
-            //string nadawca = BLL.Tools.Get_CurrentUser(item); - wymusza przypisanie stopki operatora na podstawie aktualnego adresu nadawcy
-
-            string nadawca = string.Empty; //wymusza aby testo czy trzeba dodać stopkę został wykonany w procedurze Get_TemplateByKod
-
-
             // przygotuj wiersze tabeli
 
-            BLL.dicSzablonyKomunikacji.Get_TemplateByKod(item, "INVOICE_LIST_TR_TEMPLATE", out temat, out trescHTML, nadawca);
+            BLL.dicSzablonyKomunikacji.Get_TemplateByKod(item, "INVOICE_LIST_TR_TEMPLATE", out temat, out trescHTML, false);
 
             string rowTemplate = trescHTML;
             StringBuilder sb = new StringBuilder();
@@ -490,6 +485,10 @@ namespace STAFix24_Bcfuture.ImportFakturWF
             }
 
             //sprawdz czy nie nadpisać szablonu
+
+            string nadawca = Tools.GetUserEmail(item, "Author"); //- wymusza przypisanie stopki operatora na podstawie aktualnego adresu nadawcy
+            if (string.IsNullOrEmpty(nadawca)) nadawca = BLL.admSetup.GetValue(item.Web, "EMAIL_BIURA");
+            //string nadawca = string.Empty; //wymusza aby testo czy trzeba dodać stopkę został wykonany w procedurze Get_TemplateByKod
 
             BLL.dicSzablonyKomunikacji.Get_TemplateByKod(item, "INVOICE_LIST_TEMPLATE.Include", out temat, out trescHTML, nadawca);
 

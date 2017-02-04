@@ -20,22 +20,41 @@ namespace BLL
             string temp = string.Empty;
             string footerTR = string.Empty;
 
+            int operatorId = 0;
+
             Get_TemplateByKod(item, "EMAIL_FOOTER_TR", out temp, out footerTR, false);
 
             if (string.IsNullOrEmpty(nadawcaEmail))
             {
-                int operatorId = Get_LookupId(item, "selOperator");
-                footerTR = Format_FooterTR(item, footerTR, operatorId);
+                try
+                {
+                    operatorId = Get_LookupId(item, "selOperator");
+                    footerTR = Format_FooterTR(item, footerTR, operatorId);
+                }
+                catch (Exception)
+                {}
             }
             else
             {
-                int operatorId = BLL.dicOperatorzy.Get_OperatorIdByEmail(item.Web, nadawcaEmail);
-                footerTR = Format_FooterTR(item, footerTR, operatorId);
+                try
+                {
+                    operatorId = BLL.dicOperatorzy.Get_OperatorIdByEmail(item.Web, nadawcaEmail);
+                    footerTR = Format_FooterTR(item, footerTR, operatorId);
+                }
+                catch (Exception)
+                {}
             }
 
-            Get_TemplateByKod(item, kod, out temat, out trescHTML, true);
-            trescHTML = trescHTML.Replace("___FOOTER___", footerTR);
-
+            if (operatorId == 0)
+            {
+                Get_TemplateByKod(item, kod, out temat, out trescHTML, false);
+            }
+            else
+            {
+                Get_TemplateByKod(item, kod, out temat, out trescHTML, true);
+                trescHTML = trescHTML.Replace("___FOOTER___", footerTR);
+            }
+            
         }
 
         private static string Format_FooterTR(SPListItem item, string footerTR, int operatorId)
