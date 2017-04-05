@@ -329,8 +329,9 @@ namespace BLL
 
             SPList list = web.Lists.TryGetList(targetList);
             SPListItem item = list.Items.Cast<SPListItem>()
-                .Where(i => i["KEY"].ToString().Equals(KEY))
+                .Where(i => string.IsNullOrEmpty(i["KEY"].ToString()) && i["KEY"].ToString().Equals(KEY))
                 .FirstOrDefault();
+
             if (item != null)
             {
                 return item.ID;
